@@ -14,6 +14,8 @@ window.initMap = () => {
         center: restaurant.latlng,
         scrollwheel: false
       });
+      document.querySelector('#map').setAttribute('aria-label', 'Restaurant map');
+      document.querySelector('#map').setAttribute('role', 'application');
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
@@ -56,7 +58,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
-  image.className = 'restaurant-img'
+  image.className = 'restaurant-img';
+  image.alt = 'Image of ' + restaurant.name;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
@@ -121,7 +124,7 @@ createReviewHTML = (review) => {
   const reviewHeader = document.createElement('div');
   reviewHeader.classList.add('review-header');
 
-  const name = document.createElement('p');
+  const name = document.createElement('h3');
   name.innerHTML = review.name;
   name.classList.add('reviewer-name');
   reviewHeader.appendChild(name);

@@ -81,7 +81,7 @@ section {
 
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #B3B3B3;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -89,6 +89,9 @@ section {
   text-transform: uppercase;
 }
 
+#footer a:hover {
+  color: #78BBE8;
+}
 
 /* ====================== Navigation ====================== */
 
@@ -173,7 +176,7 @@ header nav h1 a{
 .filter-options {
   width: 100%;
   height: 100px;
-  background-color: #3397DB;
+  background-color: #207AB6;
   align-items: center;
 }
 
@@ -248,7 +251,7 @@ header nav h1 a{
 }
 
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #B35F00;
   font-family: Arial, sans-serif;
   font-size: 14pt;
   font-weight: 200;
@@ -264,9 +267,9 @@ header nav h1 a{
 }
 
 #restaurants-list li a {
-  background-color: orange;
+  background-color: #FFDB99;
   border-bottom: 3px solid #eee;
-  color: #fff;
+  color: #474747;
   display: inline-block;
   font-size: 10pt;
   margin: 15px 0 0;
@@ -314,6 +317,10 @@ header nav h1 a{
   width: 100%;
 }
 
+.inside header #breadcrumb li a {
+  color: #026AC5;
+}
+
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   height: 300px;
@@ -337,7 +344,7 @@ header nav h1 a{
 }
 
 #restaurant-name {
-  color: #f18200;
+  color: #A35700;
   font-family: Arial, sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -385,7 +392,7 @@ header nav h1 a{
 }
 
 #reviews-container h2 {
-  color: #f58500;
+  color: #A35A00;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -441,7 +448,7 @@ header nav h1 a{
 
 .review-rating {
   margin-top: 15px;
-  background-color: #ffa500;
+  background-color: #A36A00;
   color: #fff;
   padding: 5px 10px;
   display: inline-block;
@@ -457,10 +464,18 @@ header nav h1 a{
     grid-template-columns: 1fr 1fr;
   }
 
+  .inside #restaurant-container {
+    margin-top: 100px;
+  }
+
+  .inside #restaurant-container h1 {
+    margin-bottom: 0;
+  }
+
   .inside #map-container {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-    height: 85%;
+    height: 86%;
     align-self: stretch;
   }
 
