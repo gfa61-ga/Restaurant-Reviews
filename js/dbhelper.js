@@ -13,8 +13,11 @@ class DBHelper {
     }
 
     // Register the service worker if this is the first visit to site.
-    navigator.serviceWorker.register('/gfa61-ga.github.io/Restaurant-Reviews/sw.js', {
-      scope: '/gfa61-ga.github.io/Restaurant-Reviews/'
+
+//  navigator.serviceWorker.register('/sw.js', {
+//    scope: '/'
+    navigator.serviceWorker.register('/Restaurant-Reviews/sw.js', {
+      scope: '/Restaurant-Reviews/'
     });
 
     /* The first time the service worker becomes active,
@@ -175,6 +178,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
+//  return (`/img/${restaurant.photograph}`);
     return (`./img/${restaurant.photograph}`);
   }
 
