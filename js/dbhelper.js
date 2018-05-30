@@ -13,8 +13,8 @@ class DBHelper {
     }
 
     // Register the service worker if this is the first visit to site.
-    navigator.serviceWorker.register('/sw.js', {
-      scope: '/'
+    navigator.serviceWorker.register('/gfa61-ga.github.io/Restaurant-Reviews/sw.js', {
+      scope: '/gfa61-ga.github.io/Restaurant-Reviews/'
     });
 
     /* The first time the service worker becomes active,
@@ -27,19 +27,14 @@ class DBHelper {
     });
   }
 
-
-
-
-
-
-
   /**
    * Database URL.
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
-      return `http://localhost:${port}/data/restaurants.json`;
+//    return `http://localhost:${port}/data/restaurants.json`;
+      return `https://gfa61-ga.github.io/Restaurant-Reviews/data/restaurants.json`;
   }
 
   /**
