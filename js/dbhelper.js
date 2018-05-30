@@ -14,6 +14,7 @@ class DBHelper {
 
     // Register the service worker if this is the first visit to site.
 
+/***** Switch commens in code to run page on local servel OR on github *****/
 //  navigator.serviceWorker.register('/sw.js', {
 //    scope: '/'
     navigator.serviceWorker.register('/Restaurant-Reviews/sw.js', {
@@ -36,6 +37,7 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
+/***** Switch commens in code to run page on local servel OR on github *****/
 //    return `http://localhost:${port}/data/restaurants.json`;
       return `https://gfa61-ga.github.io/Restaurant-Reviews/data/restaurants.json`;
   }
@@ -178,6 +180,8 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
+
+/***** Switch commens in code to run page on local servel OR on github *****/
 //  return (`/img/${restaurant.photograph}`);
     return (`./img/${restaurant.photograph}`);
   }
