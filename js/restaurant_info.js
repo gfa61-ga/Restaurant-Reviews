@@ -1,6 +1,9 @@
 let restaurant;
 var map;
 
+// Register the service worker if this is the first visit to site.
+DBHelper.registerServiceWorker();
+
 /**
  * Initialize Google map, called from HTML.
  */

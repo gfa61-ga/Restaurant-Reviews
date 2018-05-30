@@ -4,13 +4,42 @@
 class DBHelper {
 
   /**
+   * Register Service Worker.
+   */
+  static registerServiceWorker() {
+    // If browser does not support ServiceWorkers, don't register one.
+    if (!navigator.serviceWorker) {
+      return;
+    }
+
+    // Register the service worker if this is the first visit to site.
+    navigator.serviceWorker.register('/sw.js', {
+      scope: '/'
+    });
+
+    /* The first time the service worker becomes active,
+     * can not save the content of the current page in cache.
+     * That's why we must reload the page,
+     * in order the service worker to take control of it and save its content.
+     */
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      window.location.reload();
+    });
+  }
+
+
+
+
+
+
+
+  /**
    * Database URL.
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
-    // return `http://localhost:${port}/data/restaurants.json`;
-    return `https://gfa61-ga.github.io/Restaurant-Reviews/data/restaurants.json`;
+      return `http://localhost:${port}/data/restaurants.json`;
   }
 
   /**
